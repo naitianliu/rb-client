@@ -13,5 +13,6 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "SWRevealViewController.h"
+#import "UIImageView+WebCache.h"
 
 #endif

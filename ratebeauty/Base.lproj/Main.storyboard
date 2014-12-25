@@ -119,6 +119,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="43x-7c-uZ8" id="ume-Rx-Xcm">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjw-4T-3bq">
+                                                    <rect key="frame" x="119" y="17" width="123" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFX-WC-DAr" customClass="FBProfilePictureView">
                                                     <rect key="frame" x="8" y="17" width="84" height="68"/>
                                                     <color key="backgroundColor" red="0.26279331937441741" green="1" blue="0.93918110824647727" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,12 +133,6 @@
                                                         <constraint firstAttribute="height" constant="75" id="oeE-PJ-aXN"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjw-4T-3bq">
-                                                    <rect key="frame" x="119" y="17" width="123" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QFX-WC-DAr" firstAttribute="leading" secondItem="ume-Rx-Xcm" secondAttribute="leadingMargin" constant="10" id="3lO-9t-KQ2"/>
@@ -154,20 +154,6 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="q9u-Rl-omy">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Ebc-k9-it9" rowHeight="54" style="IBUITableViewCellStyleDefault" id="Ru3-fO-wga">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ru3-fO-wga" id="X5I-HR-yVS">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Setting 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ebc-k9-it9">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="xqC-gD-jMF" rowHeight="54" style="IBUITableViewCellStyleDefault" id="Xyc-RX-e1o">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xyc-RX-e1o" id="Wwf-rr-v6Q">
@@ -346,6 +332,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pK6-GF-5Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="416" y="970"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="fhQ-GP-U5G">
+            <objects>
+                <viewController storyboardIdentifier="accountViewController" id="7dW-rZ-tGb" customClass="AccountViewController" customModule="ratebeauty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m5I-0h-315"/>
+                        <viewControllerLayoutGuide type="bottom" id="E4f-6G-quk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s3W-pa-f1G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAw-eT-4NU">
+                                <rect key="frame" x="53" y="485" width="44" height="30"/>
+                                <state key="normal" title="logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonOnClick:" destination="7dW-rZ-tGb" eventType="touchUpInside" id="oH8-60-z9q"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3n-cm-gGL" customClass="FBProfilePictureView">
+                                <rect key="frame" x="16" y="205" width="134" height="127"/>
+                                <color key="backgroundColor" red="0.30794160004174598" green="0.73212130793464392" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLd-kE-scv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="flw-LP-PWo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="BLd-kE-scv" secondAttribute="centerX" id="T0v-Ko-yXN"/>
+                            <constraint firstAttribute="width" secondItem="BLd-kE-scv" secondAttribute="width" id="lbR-aB-Z62"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fbPPView" destination="Q3n-cm-gGL" id="vxu-7k-5M8"/>
+                        <outlet property="logoutButton" destination="oAw-eT-4NU" id="GoP-IQ-jxL"/>
+                        <outlet property="topBgImageView" destination="BLd-kE-scv" id="hQ8-7O-Cy5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROb-8E-ETb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="975"/>
         </scene>
     </scenes>
 </document>

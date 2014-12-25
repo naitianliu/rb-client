@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         let loginViewController:UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
         var frontViewController:UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("mainViewController") as UIViewController
 
-        let rearViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("accountSettingsController") as UITableViewController
+        let rearViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("accountViewController") as UIViewController
 
         
         var frontNavigationController:UINavigationController = UINavigationController(rootViewController: frontViewController)
