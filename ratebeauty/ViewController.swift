@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, RatingButtonGroupDelegate {
 
     @IBOutlet weak var ratingSlider: UISlider!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var beautyFBProfilePictureView: FBProfilePictureView!
+    
+    var ratingButtonGroup: RatingButtonGroup!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +33,9 @@ class ViewController: UIViewController {
         //391937524289261
         //529789400456737
         self.beautyFBProfilePictureView.profileID = "529789400456737"
+        
+        self.ratingButtonGroup = RatingButtonGroup(view: self.view, delegate: self)
+        self.ratingButtonGroup.showInView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +62,10 @@ class ViewController: UIViewController {
         self.presentViewController(loginViewController, animated: true, completion: { () -> Void in
             println("complete")
         })
+    }
+    
+    func ratingButtonOnClick(buttonIndex: Int) {
+        println("button index is \(buttonIndex)")
     }
 
 }

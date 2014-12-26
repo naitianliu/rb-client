@@ -37,6 +37,7 @@
 		46610DA41A4C04CC007E1145 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D921A4C04CC007E1145 /* UIImageView+HighlightedWebCache.m */; };
 		46610DA51A4C04CC007E1145 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D941A4C04CC007E1145 /* UIImageView+WebCache.m */; };
 		46610DA61A4C04CC007E1145 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D961A4C04CC007E1145 /* UIView+WebCacheOperation.m */; };
+		46610DA91A4D328F007E1145 /* RatingButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46610DA81A4D328F007E1145 /* RatingButtonGroup.swift */; };
 		46B9214D1A31582100D83851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9214C1A31582100D83851 /* AppDelegate.swift */; };
 		46B921521A31582100D83851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B921501A31582100D83851 /* Main.storyboard */; };
 		46B921541A31582100D83851 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B921531A31582100D83851 /* Images.xcassets */; };
@@ -116,6 +117,7 @@
 		46610D941A4C04CC007E1145 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		46610D951A4C04CC007E1145 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		46610D961A4C04CC007E1145 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		46610DA81A4D328F007E1145 /* RatingButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingButtonGroup.swift; sourceTree = "<group>"; };
 		46B921471A31582100D83851 /* ratebeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ratebeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B9214B1A31582100D83851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B9214C1A31582100D83851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,14 @@
 			path = AFNetworking/SDWebImage;
 			sourceTree = "<group>";
 		};
+		46610DAA1A4D37FA007E1145 /* RatingButtonGroup */ = {
+			isa = PBXGroup;
+			children = (
+				46610DA81A4D328F007E1145 /* RatingButtonGroup.swift */,
+			);
+			name = RatingButtonGroup;
+			sourceTree = "<group>";
+		};
 		46B9213E1A31582100D83851 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +274,7 @@
 		46B9214A1A31582100D83851 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46610DAA1A4D37FA007E1145 /* RatingButtonGroup */,
 				46610D751A4C04CC007E1145 /* SDWebImage */,
 				461F0B3D1A4AA125003BA44E /* AFNetworking */,
 				461F0B341A4AA082003BA44E /* SWRevealViewController */,
@@ -420,6 +431,7 @@
 				461F0B371A4AA082003BA44E /* SWRevealViewController.m in Sources */,
 				461F0B551A4AA125003BA44E /* AFSecurityPolicy.m in Sources */,
 				46610DA41A4C04CC007E1145 /* UIImageView+HighlightedWebCache.m in Sources */,
+				46610DA91A4D328F007E1145 /* RatingButtonGroup.swift in Sources */,
 				46610D9C1A4C04CC007E1145 /* SDWebImageDownloader.m in Sources */,
 				46610D9F1A4C04CC007E1145 /* SDWebImagePrefetcher.m in Sources */,
 				46B9214D1A31582100D83851 /* AppDelegate.swift in Sources */,
