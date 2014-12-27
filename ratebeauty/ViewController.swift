@@ -16,6 +16,7 @@ class ViewController: UIViewController, RatingButtonGroupDelegate {
     @IBOutlet weak var beautyFBProfilePictureView: FBProfilePictureView!
     
     var ratingButtonGroup: RatingButtonGroup!
+    var ratingButtonGroupShowHideMark:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +28,19 @@ class ViewController: UIViewController, RatingButtonGroupDelegate {
         revealController.tapGestureRecognizer()
         
         var revealButtonItem:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "reveal-icon.png"), style: UIBarButtonItemStyle.Bordered, target: revealController, action: Selector("revealToggle:"))
+        var rightRevealButtonItem:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "reveal-icon.png"), style: UIBarButtonItemStyle.Bordered, target: revealController, action: Selector("rightRevealToggle:"))
+
         
         self.navigationItem.leftBarButtonItem = revealButtonItem
+        self.navigationItem.rightBarButtonItem = rightRevealButtonItem
         
         //391937524289261
         //529789400456737
         self.beautyFBProfilePictureView.profileID = "529789400456737"
         
         self.ratingButtonGroup = RatingButtonGroup(view: self.view, delegate: self)
-        self.ratingButtonGroup.showInView()
+        var tapGR:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "showAndHideRatingButtonGroup")
+        self.view.addGestureRecognizer(tapGR)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,16 +48,20 @@ class ViewController: UIViewController, RatingButtonGroupDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-    }
-    override func viewWillAppear(animated: Bool) {
-        
-    }
     @IBAction func ratingSliderValueChanged(sender: AnyObject) {
         var currentValue = self.ratingSlider.value
         var score:Int = (Int)(currentValue * 10)
         self.scoreLabel.text = String(score)
+    }
+    
+    func showAndHideRatingButtonGroup(){
+        if self.ratingButtonGroupShowHideMark == 0 {
+            self.ratingButtonGroup.showInView()
+            self.ratingButtonGroupShowHideMark = 1
+        } else {
+            self.ratingButtonGroup.hideInView()
+            self.ratingButtonGroupShowHideMark = 0
+        }
     }
     
     func loadLoginView() {

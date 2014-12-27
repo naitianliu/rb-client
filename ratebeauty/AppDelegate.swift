@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         var frontViewController:UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("mainViewController") as UIViewController
 
         let rearViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("accountViewController") as UIViewController
+        let rightViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("rankViewController") as UIViewController
 
         
         var frontNavigationController:UINavigationController = UINavigationController(rootViewController: frontViewController)
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
         
         var revealController:SWRevealViewController = SWRevealViewController(rearViewController: rearNavigationController, frontViewController: frontNavigationController)
         revealController.delegate = self
+        revealController.rightViewController = rightViewController
         
         self.swRevealViewController = revealController
         

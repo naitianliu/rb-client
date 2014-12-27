@@ -18,33 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kd6-l1-5jB">
-                                <rect key="frame" x="129" y="475" width="327" height="91"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-vY-hx9">
-                                        <rect key="frame" x="42" y="31" width="162" height="31"/>
-                                        <connections>
-                                            <action selector="ratingSliderValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="5K9-uz-W4n"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-k3-osK">
-                                        <rect key="frame" x="8" y="35" width="20" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-eA-2qp">
-                                        <rect key="frame" x="252" y="31" width="30" height="30"/>
-                                        <state key="normal" title="next">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.98663031616538466" blue="0.6804322317750916" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="91" id="eVY-TP-I6O"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-tj-3lp" customClass="FBProfilePictureView">
                                 <rect key="frame" x="137" y="114" width="311" height="268"/>
                                 <color key="backgroundColor" red="1" green="0.84012217740377138" blue="0.92301971177891029" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,12 +45,9 @@
                             <constraint firstItem="WqB-tj-3lp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="8Kr-FV-Jb5"/>
                             <constraint firstAttribute="centerX" secondItem="WqB-tj-3lp" secondAttribute="centerX" id="GOi-A5-aM8"/>
                             <constraint firstItem="WqB-tj-3lp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="HHe-9z-tcn"/>
-                            <constraint firstAttribute="centerX" secondItem="kd6-l1-5jB" secondAttribute="centerX" id="NHq-3o-iWw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WqB-tj-3lp" secondAttribute="trailing" constant="136" id="Ufo-15-OGM"/>
-                            <constraint firstItem="kd6-l1-5jB" firstAttribute="width" secondItem="WqB-tj-3lp" secondAttribute="width" id="VY1-a8-0B2"/>
                             <constraint firstItem="WqB-tj-3lp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="Y6O-gl-SWe"/>
                             <constraint firstItem="WqB-tj-3lp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ZN5-8q-UMp"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kd6-l1-5jB" secondAttribute="bottom" constant="20" id="h11-eU-08z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WqB-tj-3lp" secondAttribute="trailing" constant="20" id="hWw-5A-wc8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WqB-tj-3lp" secondAttribute="trailing" constant="20" id="kZT-Jh-Skn"/>
                         </constraints>
@@ -93,9 +63,6 @@
                     <navigationItem key="navigationItem" title="Rate Beauty" id="yEb-sM-y9M"/>
                     <connections>
                         <outlet property="beautyFBProfilePictureView" destination="WqB-tj-3lp" id="QRf-2H-cBf"/>
-                        <outlet property="nextButton" destination="QYx-eA-2qp" id="W9m-Kq-auW"/>
-                        <outlet property="ratingSlider" destination="GaE-vY-hx9" id="JCZ-0r-Frq"/>
-                        <outlet property="scoreLabel" destination="h0q-k3-osK" id="Aia-Dh-Xcj"/>
                         <outlet property="view" destination="WqB-tj-3lp" id="wm4-Rb-Got"/>
                     </connections>
                 </viewController>
@@ -380,6 +347,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROb-8E-ETb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072" y="975"/>
+        </scene>
+        <!--Rank View Controller-->
+        <scene sceneID="pk3-Uf-68d">
+            <objects>
+                <viewController storyboardIdentifier="rankViewController" id="OrJ-Bw-3Og" customClass="RankViewController" customModule="ratebeauty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jlE-zs-WUg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z2e-h1-RLg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3bl-Ek-XV9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-jm-NHk">
+                                <rect key="frame" x="152" y="267" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FnH-ps-3J5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="975"/>
         </scene>
     </scenes>
 </document>
