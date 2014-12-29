@@ -8,12 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, RatingButtonGroupDelegate {
+class ViewController: UIViewController, RatingButtonGroupDelegate, ScoreImageStampDelegate, CardGroupViewHelperDelegate {
 
-    @IBOutlet weak var ratingSlider: UISlider!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var beautyFBProfilePictureView: FBProfilePictureView!
+    var scoreImageStamp:ScoreImageStamp!
+    var cardGroupViewHelper:CardGroupViewHelper!
     
     var ratingButtonGroup: RatingButtonGroup!
     var ratingButtonGroupShowHideMark:Int = 0
@@ -34,24 +32,19 @@ class ViewController: UIViewController, RatingButtonGroupDelegate {
         self.navigationItem.leftBarButtonItem = revealButtonItem
         self.navigationItem.rightBarButtonItem = rightRevealButtonItem
         
-        //391937524289261
-        //529789400456737
-        self.beautyFBProfilePictureView.profileID = "529789400456737"
+        self.cardGroupViewHelper = CardGroupViewHelper(view:self.view, delegate: self)
         
         self.ratingButtonGroup = RatingButtonGroup(view: self.view, delegate: self)
         var tapGR:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "showAndHideRatingButtonGroup")
         self.view.addGestureRecognizer(tapGR)
+        
+        self.scoreImageStamp.addSubViewToTop()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func ratingSliderValueChanged(sender: AnyObject) {
-        var currentValue = self.ratingSlider.value
-        var score:Int = (Int)(currentValue * 10)
-        self.scoreLabel.text = String(score)
     }
     
     func showAndHideRatingButtonGroup(){
@@ -73,8 +66,19 @@ class ViewController: UIViewController, RatingButtonGroupDelegate {
         })
     }
     
+    func returnCurrentView(currentCardView: UIView, currentFBPPView: FBProfilePictureView) {
+        self.scoreImageStamp = ScoreImageStamp(view: self.view, cardView: currentCardView, fbPPView: currentFBPPView, delegate: self)
+    }
+    
     func ratingButtonOnClick(buttonIndex: Int) {
-        println("button index is \(buttonIndex)")
+        //self.scoreImageStamp.showInView(buttonIndex)
+        self.scoreImageStamp.showInView(buttonIndex)
+    }
+    
+    func readyToSwitchCardView() {
+        println("finished")
+        self.scoreImageStamp.hideInView()
+        self.cardGroupViewHelper.switchCardView("", nextFBProfileID: "")
     }
 
 }

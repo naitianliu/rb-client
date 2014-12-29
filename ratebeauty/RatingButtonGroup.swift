@@ -15,8 +15,8 @@ protocol RatingButtonGroupDelegate {
 
 class RatingButtonGroup: NSObject {
     
-    let buttonHeight:CGFloat = 50
-    let buttonWidth:CGFloat = 50
+    let buttonHeight:CGFloat = 60
+    let buttonWidth:CGFloat = 60
     let viewHeight:CGFloat!
     let viewWidth:CGFloat!
     let gapHorizon:CGFloat!
@@ -130,9 +130,24 @@ class RatingButtonGroup: NSObject {
         switch sender {
         case self.btn_1:
             index = 1
-            break
         case self.btn_2:
             index = 2
+        case self.btn_3:
+            index = 3
+        case self.btn_4:
+            index = 4
+        case self.btn_5:
+            index = 5
+        case self.btn_6:
+            index = 6
+        case self.btn_7:
+            index = 7
+        case self.btn_8:
+            index = 8
+        case self.btn_9:
+            index = 9
+        case self.btn_10:
+            index = 10
         default:
             println("None")
         }
@@ -146,45 +161,41 @@ class RatingButtonGroup: NSObject {
     
     func buttonAppearAnimation1(button:UIButton, delay:NSTimeInterval){
         UIView.animateWithDuration(0.3, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            println("start animation")
             var buttonFrame = button.frame
             buttonFrame.origin.y -= buttonFrame.size.height * 3
             button.frame = buttonFrame
         }) { (finished) -> Void in
-            println("down")
+            
         }
     }
     
     func buttonAppearAnimation2(button:UIButton, delay:NSTimeInterval){
         UIView.animateWithDuration(0.3, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            println("start animation")
             var buttonFrame = button.frame
             buttonFrame.origin.y -= (buttonFrame.size.height * 2)
             button.frame = buttonFrame
             }) { (finished) -> Void in
-                println("down")
+
         }
     }
     
     func buttonAppearAnimation3(button:UIButton, delay:NSTimeInterval){
         UIView.animateWithDuration(0.3, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            println("start animation")
             var buttonFrame = button.frame
             buttonFrame.origin.y += (buttonFrame.size.height * 3)
             button.frame = buttonFrame
             }) { (finished) -> Void in
-                println("down")
+
         }
     }
     
     func buttonAppearAnimation4(button:UIButton, delay:NSTimeInterval){
         UIView.animateWithDuration(0.3, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            println("start animation")
             var buttonFrame = button.frame
             buttonFrame.origin.y += (buttonFrame.size.height * 2)
             button.frame = buttonFrame
             }) { (finished) -> Void in
-                println("down")
+
         }
     }
 }

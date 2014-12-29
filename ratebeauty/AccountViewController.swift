@@ -8,29 +8,25 @@
 
 import UIKit
 
-class AccountViewController: UIViewController, FBLoginViewDelegate, UIActionSheetDelegate {
+class AccountViewController: UIViewController, FBLoginViewDelegate, UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var topBgImageView: UIImageView!
-    @IBOutlet weak var fbPPView: FBProfilePictureView!
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var accountTableView: UITableView!
+    
+    var accountViewUIHelper:AccountViewUIHelper!
+    
+    let testID_1:String = "529789400456737"
+    let testID_2:String = "391937524289261"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.fbPPView.profileID = "529789400456737"
+        self.accountViewUIHelper = AccountViewUIHelper(view: self.view)
+        self.topBgImageView = self.accountViewUIHelper.renderTopBgImageView(self.topBgImageView, fbProfileId: self.testID_1)
+        self.accountViewUIHelper.initFBPPView(self.topBgImageView, fbProfileId: self.testID_1)
         
-        let profileImageURL = "https://graph.facebook.com/391937524289261/picture?type=large"
-        let block: SDWebImageCompletionBlock! = {(image: UIImage!, error: NSError!, cacheType: SDImageCacheType!, imageURL: NSURL!) -> Void in
-            // println(self)
-        }
-        let url = NSURL(string: profileImageURL)
-        self.topBgImageView.sd_setImageWithURL(url, completed:block)
-        
-        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Light)) as UIVisualEffectView
-        visualEffectView.frame = self.topBgImageView.bounds
-        visualEffectView.alpha = 0.8
-        self.topBgImageView.addSubview(visualEffectView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +60,37 @@ class AccountViewController: UIViewController, FBLoginViewDelegate, UIActionShee
         let url:String = "https://graph.facebook.com/\(fbUserId)/picture?type=large"
         println(url)
         return UIImage()
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "accountTableViewCell") as UITableViewCell
+        
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "Title"
+            cell.detailTextLabel?.text = "SubTitle"
+            cell.imageView?.image = UIImage(named: "0.png")
+        case 1:
+            cell.textLabel?.text = "Title"
+            cell.detailTextLabel?.text = "SubTitle"
+            cell.imageView?.image = UIImage(named: "0.png")
+        case 2:
+            cell.textLabel?.text = "Title"
+            cell.detailTextLabel?.text = "SubTitle"
+            cell.imageView?.image = UIImage(named: "0.png")
+        default:
+            break
+        }
+        
+        return cell
     }
     
     /*

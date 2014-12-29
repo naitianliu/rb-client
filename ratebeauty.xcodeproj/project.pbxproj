@@ -21,6 +21,10 @@
 		461F0B591A4AA125003BA44E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 461F0B501A4AA125003BA44E /* AFURLSessionManager.m */; };
 		461F0B5D1A4BC05E003BA44E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461F0B5C1A4BC05E003BA44E /* AccountViewController.swift */; };
 		461F13CC1A345C18005290E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461F13CB1A345C18005290E1 /* ViewController.swift */; };
+		4644520C1A4F7C220073B1D1 /* CardGroupViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4644520B1A4F7C220073B1D1 /* CardGroupViewHelper.swift */; };
+		4644520E1A4F80E00073B1D1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644520D1A4F80E00073B1D1 /* QuartzCore.framework */; };
+		464452101A5005A60073B1D1 /* AccountViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4644520F1A5005A60073B1D1 /* AccountViewUIHelper.swift */; };
+		464452121A513CA10073B1D1 /* ActionButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464452111A513CA10073B1D1 /* ActionButtonGroup.swift */; };
 		46610D971A4C04CC007E1145 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D771A4C04CC007E1145 /* MKAnnotationView+WebCache.m */; };
 		46610D981A4C04CC007E1145 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D791A4C04CC007E1145 /* NSData+ImageContentType.m */; };
 		46610D991A4C04CC007E1145 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D7B1A4C04CC007E1145 /* SDImageCache.m */; };
@@ -40,6 +44,7 @@
 		46610DA91A4D328F007E1145 /* RatingButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46610DA81A4D328F007E1145 /* RatingButtonGroup.swift */; };
 		46610DAC1A4E4480007E1145 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46610DAB1A4E4480007E1145 /* RankViewController.swift */; };
 		46610DB01A4E73D8007E1145 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46610DAF1A4E73D8007E1145 /* ApiHelper.swift */; };
+		46610DB21A4EB88A007E1145 /* ScoreImageStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46610DB11A4EB88A007E1145 /* ScoreImageStamp.swift */; };
 		46B9214D1A31582100D83851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9214C1A31582100D83851 /* AppDelegate.swift */; };
 		46B921521A31582100D83851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B921501A31582100D83851 /* Main.storyboard */; };
 		46B921541A31582100D83851 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B921531A31582100D83851 /* Images.xcassets */; };
@@ -64,7 +69,7 @@
 		461F0B361A4AA082003BA44E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		461F0B381A4AA0A6003BA44E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		461F0B391A4AA0A6003BA44E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		461F0B3B1A4AA106003BA44E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		461F0B3B1A4AA106003BA44E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK.framework; sourceTree = "<group>"; };
 		461F0B3E1A4AA125003BA44E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		461F0B3F1A4AA125003BA44E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		461F0B401A4AA125003BA44E /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -86,6 +91,10 @@
 		461F0B501A4AA125003BA44E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		461F0B5C1A4BC05E003BA44E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		461F13CB1A345C18005290E1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4644520B1A4F7C220073B1D1 /* CardGroupViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGroupViewHelper.swift; sourceTree = "<group>"; };
+		4644520D1A4F80E00073B1D1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4644520F1A5005A60073B1D1 /* AccountViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewUIHelper.swift; sourceTree = "<group>"; };
+		464452111A513CA10073B1D1 /* ActionButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonGroup.swift; sourceTree = "<group>"; };
 		46610D761A4C04CC007E1145 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		46610D771A4C04CC007E1145 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		46610D781A4C04CC007E1145 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -122,6 +131,7 @@
 		46610DA81A4D328F007E1145 /* RatingButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingButtonGroup.swift; sourceTree = "<group>"; };
 		46610DAB1A4E4480007E1145 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		46610DAF1A4E73D8007E1145 /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		46610DB11A4EB88A007E1145 /* ScoreImageStamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreImageStamp.swift; sourceTree = "<group>"; };
 		46B921471A31582100D83851 /* ratebeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ratebeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B9214B1A31582100D83851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B9214C1A31582100D83851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4644520E1A4F80E00073B1D1 /* QuartzCore.framework in Frameworks */,
 				461F0B3C1A4AA106003BA44E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,12 +242,16 @@
 			path = AFNetworking/SDWebImage;
 			sourceTree = "<group>";
 		};
-		46610DAA1A4D37FA007E1145 /* RatingButtonGroup */ = {
+		46610DAA1A4D37FA007E1145 /* UIHandler */ = {
 			isa = PBXGroup;
 			children = (
 				46610DA81A4D328F007E1145 /* RatingButtonGroup.swift */,
+				46610DB11A4EB88A007E1145 /* ScoreImageStamp.swift */,
+				4644520B1A4F7C220073B1D1 /* CardGroupViewHelper.swift */,
+				4644520F1A5005A60073B1D1 /* AccountViewUIHelper.swift */,
+				464452111A513CA10073B1D1 /* ActionButtonGroup.swift */,
 			);
-			name = RatingButtonGroup;
+			name = UIHandler;
 			sourceTree = "<group>";
 		};
 		46610DAD1A4E736C007E1145 /* ViewController */ = {
@@ -262,7 +277,6 @@
 		46B9213E1A31582100D83851 = {
 			isa = PBXGroup;
 			children = (
-				461F0B3B1A4AA106003BA44E /* FacebookSDK.framework */,
 				46B921491A31582100D83851 /* ratebeauty */,
 				46B9215F1A31582100D83851 /* ratebeautyTests */,
 				46B921481A31582100D83851 /* Products */,
@@ -283,7 +297,7 @@
 			children = (
 				46610DAE1A4E73A9007E1145 /* Utilities */,
 				46610DAD1A4E736C007E1145 /* ViewController */,
-				46610DAA1A4D37FA007E1145 /* RatingButtonGroup */,
+				46610DAA1A4D37FA007E1145 /* UIHandler */,
 				46B9214C1A31582100D83851 /* AppDelegate.swift */,
 				46B921501A31582100D83851 /* Main.storyboard */,
 				46B921531A31582100D83851 /* Images.xcassets */,
@@ -297,6 +311,8 @@
 		46B9214A1A31582100D83851 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4644520D1A4F80E00073B1D1 /* QuartzCore.framework */,
+				461F0B3B1A4AA106003BA44E /* FacebookSDK.framework */,
 				46610D751A4C04CC007E1145 /* SDWebImage */,
 				461F0B3D1A4AA125003BA44E /* AFNetworking */,
 				461F0B341A4AA082003BA44E /* SWRevealViewController */,
@@ -441,6 +457,7 @@
 				46610DA31A4C04CC007E1145 /* UIImage+WebP.m in Sources */,
 				46610D981A4C04CC007E1145 /* NSData+ImageContentType.m in Sources */,
 				461F0B541A4AA125003BA44E /* AFNetworkReachabilityManager.m in Sources */,
+				464452121A513CA10073B1D1 /* ActionButtonGroup.swift in Sources */,
 				461F0B511A4AA125003BA44E /* AFHTTPRequestOperation.m in Sources */,
 				46610D9B1A4C04CC007E1145 /* SDWebImageDecoder.m in Sources */,
 				46610DAC1A4E4480007E1145 /* RankViewController.swift in Sources */,
@@ -459,8 +476,10 @@
 				46610D9F1A4C04CC007E1145 /* SDWebImagePrefetcher.m in Sources */,
 				46B9214D1A31582100D83851 /* AppDelegate.swift in Sources */,
 				46610D991A4C04CC007E1145 /* SDImageCache.m in Sources */,
+				464452101A5005A60073B1D1 /* AccountViewUIHelper.swift in Sources */,
 				46610D9D1A4C04CC007E1145 /* SDWebImageDownloaderOperation.m in Sources */,
 				461F0B521A4AA125003BA44E /* AFHTTPRequestOperationManager.m in Sources */,
+				46610DB21A4EB88A007E1145 /* ScoreImageStamp.swift in Sources */,
 				46610D971A4C04CC007E1145 /* MKAnnotationView+WebCache.m in Sources */,
 				46610DA21A4C04CC007E1145 /* UIImage+MultiFormat.m in Sources */,
 				46610DA61A4C04CC007E1145 /* UIView+WebCacheOperation.m in Sources */,
@@ -468,6 +487,7 @@
 				461F0B3A1A4AA0A6003BA44E /* MBProgressHUD.m in Sources */,
 				461F0B581A4AA125003BA44E /* AFURLResponseSerialization.m in Sources */,
 				46610DB01A4E73D8007E1145 /* ApiHelper.swift in Sources */,
+				4644520C1A4F7C220073B1D1 /* CardGroupViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
