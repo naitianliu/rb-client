@@ -29,20 +29,27 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         let name = user.name
         let gender:String = user.objectForKey("gender") as String
         println(objectID)
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            println("dismissed")
-        })
         NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(objectID), forKey: "objectID")
         NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(name), forKey: "name")
         NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(gender), forKey: "gender")
-        
-        let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController:UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("mainViewController") as UIViewController
-        mainViewController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-        self.presentViewController(mainViewController, animated: true, completion: { () -> Void in
-            println("complete")
-        })
 
+    }
+    
+    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
+        let parameters:NSDictionary = [
+            "usr":[
+                "fb_id": "",
+                "first_name": "",
+                "last_name": "",
+                "is_female": true,
+                "email": "",
+                "coordinate": [
+                    "x": 42.1234,
+                    "y": 42.3232,
+                ]
+            ]
+        ]
+        ApiHelper(vc: self).login(parameters)
     }
 
     /*

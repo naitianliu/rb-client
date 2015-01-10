@@ -25,6 +25,7 @@
 		4644520E1A4F80E00073B1D1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4644520D1A4F80E00073B1D1 /* QuartzCore.framework */; };
 		464452101A5005A60073B1D1 /* AccountViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4644520F1A5005A60073B1D1 /* AccountViewUIHelper.swift */; };
 		464452121A513CA10073B1D1 /* ActionButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464452111A513CA10073B1D1 /* ActionButtonGroup.swift */; };
+		464452151A51D9B10073B1D1 /* AppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 464452141A51D9B10073B1D1 /* AppSettings.bundle */; };
 		46610D971A4C04CC007E1145 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D771A4C04CC007E1145 /* MKAnnotationView+WebCache.m */; };
 		46610D981A4C04CC007E1145 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D791A4C04CC007E1145 /* NSData+ImageContentType.m */; };
 		46610D991A4C04CC007E1145 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 46610D7B1A4C04CC007E1145 /* SDImageCache.m */; };
@@ -51,7 +52,28 @@
 		46B921571A31582100D83851 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B921551A31582100D83851 /* LaunchScreen.xib */; };
 		46B921631A31582100D83851 /* ratebeautyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B921621A31582100D83851 /* ratebeautyTests.swift */; };
 		46B9218F1A315F5000D83851 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9218E1A315F5000D83851 /* LoginViewController.swift */; };
-		46B921911A31AAF900D83851 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B921901A31AAF900D83851 /* AccountTableViewController.swift */; };
+		46C712621A59663800BA4A72 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712611A59663800BA4A72 /* CustomIOS7AlertView.m */; };
+		46C712641A59666100BA4A72 /* CustomAlertViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C712631A59666100BA4A72 /* CustomAlertViewUIHelper.swift */; };
+		46C712971A5A3F5200BA4A72 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712681A5A3F5200BA4A72 /* IASKAppSettingsViewController.m */; };
+		46C712981A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C7126A1A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.m */; };
+		46C712991A5A3F5200BA4A72 /* IASKMultipleValueSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C7126C1A5A3F5200BA4A72 /* IASKMultipleValueSelection.m */; };
+		46C7129A1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C7126E1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.m */; };
+		46C7129B1A5A3F5200BA4A72 /* IASKSettingsReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712721A5A3F5200BA4A72 /* IASKSettingsReader.m */; };
+		46C7129C1A5A3F5200BA4A72 /* IASKSettingsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712741A5A3F5200BA4A72 /* IASKSettingsStore.m */; };
+		46C7129D1A5A3F5200BA4A72 /* IASKSettingsStoreFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712761A5A3F5200BA4A72 /* IASKSettingsStoreFile.m */; };
+		46C7129E1A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712781A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.m */; };
+		46C7129F1A5A3F5200BA4A72 /* IASKSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C7127A1A5A3F5200BA4A72 /* IASKSpecifier.m */; };
+		46C712A01A5A3F5200BA4A72 /* IASKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46C7127C1A5A3F5200BA4A72 /* IASKLocalizable.strings */; };
+		46C712A11A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C7128E1A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.m */; };
+		46C712A21A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712901A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.m */; };
+		46C712A31A5A3F5200BA4A72 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712921A5A3F5200BA4A72 /* IASKSlider.m */; };
+		46C712A41A5A3F5200BA4A72 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712941A5A3F5200BA4A72 /* IASKSwitch.m */; };
+		46C712A51A5A3F5200BA4A72 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C712961A5A3F5200BA4A72 /* IASKTextField.m */; };
+		46C712A91A5A546700BA4A72 /* AppSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C712A81A5A546700BA4A72 /* AppSettingsTableViewController.swift */; };
+		46C712AB1A5B959500BA4A72 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C712AA1A5B959500BA4A72 /* StoreKit.framework */; };
+		46E5653A1A52919700FC4376 /* RankTableViewUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E565391A52919700FC4376 /* RankTableViewUIHelper.swift */; };
+		46E5653E1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5653D1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.m */; };
+		46E565401A56779A00FC4376 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5653F1A56779A00FC4376 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +117,7 @@
 		4644520D1A4F80E00073B1D1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4644520F1A5005A60073B1D1 /* AccountViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewUIHelper.swift; sourceTree = "<group>"; };
 		464452111A513CA10073B1D1 /* ActionButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonGroup.swift; sourceTree = "<group>"; };
+		464452141A51D9B10073B1D1 /* AppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppSettings.bundle; sourceTree = "<group>"; };
 		46610D761A4C04CC007E1145 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		46610D771A4C04CC007E1145 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		46610D781A4C04CC007E1145 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -143,7 +166,59 @@
 		46B921621A31582100D83851 /* ratebeautyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ratebeautyTests.swift; sourceTree = "<group>"; };
 		46B9216E1A3158BB00D83851 /* ratebeauty-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ratebeauty-Bridging-Header.h"; sourceTree = "<group>"; };
 		46B9218E1A315F5000D83851 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		46B921901A31AAF900D83851 /* AccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		46C712601A59663800BA4A72 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		46C712611A59663800BA4A72 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		46C712631A59666100BA4A72 /* CustomAlertViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewUIHelper.swift; sourceTree = "<group>"; };
+		46C712671A5A3F5200BA4A72 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
+		46C712681A5A3F5200BA4A72 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
+		46C712691A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
+		46C7126A1A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsWebViewController.m; sourceTree = "<group>"; };
+		46C7126B1A5A3F5200BA4A72 /* IASKMultipleValueSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKMultipleValueSelection.h; sourceTree = "<group>"; };
+		46C7126C1A5A3F5200BA4A72 /* IASKMultipleValueSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKMultipleValueSelection.m; sourceTree = "<group>"; };
+		46C7126D1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSpecifierValuesViewController.h; sourceTree = "<group>"; };
+		46C7126E1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSpecifierValuesViewController.m; sourceTree = "<group>"; };
+		46C7126F1A5A3F5200BA4A72 /* IASKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKViewController.h; sourceTree = "<group>"; };
+		46C712711A5A3F5200BA4A72 /* IASKSettingsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsReader.h; sourceTree = "<group>"; };
+		46C712721A5A3F5200BA4A72 /* IASKSettingsReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsReader.m; sourceTree = "<group>"; };
+		46C712731A5A3F5200BA4A72 /* IASKSettingsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStore.h; sourceTree = "<group>"; };
+		46C712741A5A3F5200BA4A72 /* IASKSettingsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStore.m; sourceTree = "<group>"; };
+		46C712751A5A3F5200BA4A72 /* IASKSettingsStoreFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStoreFile.h; sourceTree = "<group>"; };
+		46C712761A5A3F5200BA4A72 /* IASKSettingsStoreFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStoreFile.m; sourceTree = "<group>"; };
+		46C712771A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSettingsStoreUserDefaults.h; sourceTree = "<group>"; };
+		46C712781A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSettingsStoreUserDefaults.m; sourceTree = "<group>"; };
+		46C712791A5A3F5200BA4A72 /* IASKSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSpecifier.h; sourceTree = "<group>"; };
+		46C7127A1A5A3F5200BA4A72 /* IASKSpecifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSpecifier.m; sourceTree = "<group>"; };
+		46C7127D1A5A3F5200BA4A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C7127E1A5A3F5200BA4A72 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C7127F1A5A3F5200BA4A72 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712801A5A3F5200BA4A72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712811A5A3F5200BA4A72 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712821A5A3F5200BA4A72 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712831A5A3F5200BA4A72 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712841A5A3F5200BA4A72 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712851A5A3F5200BA4A72 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712861A5A3F5200BA4A72 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/IASKLocalizable.strings"; sourceTree = "<group>"; };
+		46C712871A5A3F5200BA4A72 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712881A5A3F5200BA4A72 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C712891A5A3F5200BA4A72 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C7128A1A5A3F5200BA4A72 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C7128B1A5A3F5200BA4A72 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/IASKLocalizable.strings; sourceTree = "<group>"; };
+		46C7128D1A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSSliderSpecifierViewCell.h; sourceTree = "<group>"; };
+		46C7128E1A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSSliderSpecifierViewCell.m; sourceTree = "<group>"; };
+		46C7128F1A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKPSTextFieldSpecifierViewCell.h; sourceTree = "<group>"; };
+		46C712901A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKPSTextFieldSpecifierViewCell.m; sourceTree = "<group>"; };
+		46C712911A5A3F5200BA4A72 /* IASKSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSlider.h; sourceTree = "<group>"; };
+		46C712921A5A3F5200BA4A72 /* IASKSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSlider.m; sourceTree = "<group>"; };
+		46C712931A5A3F5200BA4A72 /* IASKSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKSwitch.h; sourceTree = "<group>"; };
+		46C712941A5A3F5200BA4A72 /* IASKSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSwitch.m; sourceTree = "<group>"; };
+		46C712951A5A3F5200BA4A72 /* IASKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKTextField.h; sourceTree = "<group>"; };
+		46C712961A5A3F5200BA4A72 /* IASKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextField.m; sourceTree = "<group>"; };
+		46C712A81A5A546700BA4A72 /* AppSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsTableViewController.swift; sourceTree = "<group>"; };
+		46C712AA1A5B959500BA4A72 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		46E565391A52919700FC4376 /* RankTableViewUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankTableViewUIHelper.swift; sourceTree = "<group>"; };
+		46E5653C1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+InfiniteScroll.h"; sourceTree = "<group>"; };
+		46E5653D1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+InfiniteScroll.m"; sourceTree = "<group>"; };
+		46E5653F1A56779A00FC4376 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C712AB1A5B959500BA4A72 /* StoreKit.framework in Frameworks */,
 				4644520E1A4F80E00073B1D1 /* QuartzCore.framework in Frameworks */,
 				461F0B3C1A4AA106003BA44E /* FacebookSDK.framework in Frameworks */,
 			);
@@ -199,6 +275,14 @@
 				461F0B501A4AA125003BA44E /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		464452131A51D9770073B1D1 /* SettingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				464452141A51D9B10073B1D1 /* AppSettings.bundle */,
+			);
+			name = SettingsBundle;
 			sourceTree = "<group>";
 		};
 		46610D751A4C04CC007E1145 /* SDWebImage */ = {
@@ -250,6 +334,8 @@
 				4644520B1A4F7C220073B1D1 /* CardGroupViewHelper.swift */,
 				4644520F1A5005A60073B1D1 /* AccountViewUIHelper.swift */,
 				464452111A513CA10073B1D1 /* ActionButtonGroup.swift */,
+				46E565391A52919700FC4376 /* RankTableViewUIHelper.swift */,
+				46C712631A59666100BA4A72 /* CustomAlertViewUIHelper.swift */,
 			);
 			name = UIHandler;
 			sourceTree = "<group>";
@@ -260,8 +346,8 @@
 				461F13CB1A345C18005290E1 /* ViewController.swift */,
 				46B9218E1A315F5000D83851 /* LoginViewController.swift */,
 				461F0B5C1A4BC05E003BA44E /* AccountViewController.swift */,
-				46B921901A31AAF900D83851 /* AccountTableViewController.swift */,
 				46610DAB1A4E4480007E1145 /* RankViewController.swift */,
+				46C712A81A5A546700BA4A72 /* AppSettingsTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -295,10 +381,13 @@
 		46B921491A31582100D83851 /* ratebeauty */ = {
 			isa = PBXGroup;
 			children = (
+				46DE377A1A52054B00F7A5C8 /* SettingsTableViewController */,
+				464452131A51D9770073B1D1 /* SettingsBundle */,
 				46610DAE1A4E73A9007E1145 /* Utilities */,
 				46610DAD1A4E736C007E1145 /* ViewController */,
 				46610DAA1A4D37FA007E1145 /* UIHandler */,
 				46B9214C1A31582100D83851 /* AppDelegate.swift */,
+				46E5653F1A56779A00FC4376 /* Constant.swift */,
 				46B921501A31582100D83851 /* Main.storyboard */,
 				46B921531A31582100D83851 /* Images.xcassets */,
 				46B921551A31582100D83851 /* LaunchScreen.xib */,
@@ -311,6 +400,10 @@
 		46B9214A1A31582100D83851 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				46C712AA1A5B959500BA4A72 /* StoreKit.framework */,
+				46C712651A5A3F5200BA4A72 /* InAppSettingsKit */,
+				46C7125F1A59661700BA4A72 /* CustomAlertView */,
+				46E5653B1A53CDAD00FC4376 /* InfiniteScroll */,
 				4644520D1A4F80E00073B1D1 /* QuartzCore.framework */,
 				461F0B3B1A4AA106003BA44E /* FacebookSDK.framework */,
 				46610D751A4C04CC007E1145 /* SDWebImage */,
@@ -337,6 +430,100 @@
 				46B921611A31582100D83851 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46C7125F1A59661700BA4A72 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				46C712601A59663800BA4A72 /* CustomIOS7AlertView.h */,
+				46C712611A59663800BA4A72 /* CustomIOS7AlertView.m */,
+			);
+			name = CustomAlertView;
+			sourceTree = "<group>";
+		};
+		46C712651A5A3F5200BA4A72 /* InAppSettingsKit */ = {
+			isa = PBXGroup;
+			children = (
+				46C712661A5A3F5200BA4A72 /* Controllers */,
+				46C712701A5A3F5200BA4A72 /* Models */,
+				46C7127B1A5A3F5200BA4A72 /* Resources */,
+				46C7128C1A5A3F5200BA4A72 /* Views */,
+			);
+			path = InAppSettingsKit;
+			sourceTree = "<group>";
+		};
+		46C712661A5A3F5200BA4A72 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				46C712671A5A3F5200BA4A72 /* IASKAppSettingsViewController.h */,
+				46C712681A5A3F5200BA4A72 /* IASKAppSettingsViewController.m */,
+				46C712691A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.h */,
+				46C7126A1A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.m */,
+				46C7126B1A5A3F5200BA4A72 /* IASKMultipleValueSelection.h */,
+				46C7126C1A5A3F5200BA4A72 /* IASKMultipleValueSelection.m */,
+				46C7126D1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.h */,
+				46C7126E1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.m */,
+				46C7126F1A5A3F5200BA4A72 /* IASKViewController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		46C712701A5A3F5200BA4A72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				46C712711A5A3F5200BA4A72 /* IASKSettingsReader.h */,
+				46C712721A5A3F5200BA4A72 /* IASKSettingsReader.m */,
+				46C712731A5A3F5200BA4A72 /* IASKSettingsStore.h */,
+				46C712741A5A3F5200BA4A72 /* IASKSettingsStore.m */,
+				46C712751A5A3F5200BA4A72 /* IASKSettingsStoreFile.h */,
+				46C712761A5A3F5200BA4A72 /* IASKSettingsStoreFile.m */,
+				46C712771A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.h */,
+				46C712781A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.m */,
+				46C712791A5A3F5200BA4A72 /* IASKSpecifier.h */,
+				46C7127A1A5A3F5200BA4A72 /* IASKSpecifier.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		46C7127B1A5A3F5200BA4A72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46C7127C1A5A3F5200BA4A72 /* IASKLocalizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		46C7128C1A5A3F5200BA4A72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46C7128D1A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.h */,
+				46C7128E1A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.m */,
+				46C7128F1A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.h */,
+				46C712901A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.m */,
+				46C712911A5A3F5200BA4A72 /* IASKSlider.h */,
+				46C712921A5A3F5200BA4A72 /* IASKSlider.m */,
+				46C712931A5A3F5200BA4A72 /* IASKSwitch.h */,
+				46C712941A5A3F5200BA4A72 /* IASKSwitch.m */,
+				46C712951A5A3F5200BA4A72 /* IASKTextField.h */,
+				46C712961A5A3F5200BA4A72 /* IASKTextField.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		46DE377A1A52054B00F7A5C8 /* SettingsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SettingsTableViewController;
+			sourceTree = "<group>";
+		};
+		46E5653B1A53CDAD00FC4376 /* InfiniteScroll */ = {
+			isa = PBXGroup;
+			children = (
+				46E5653C1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.h */,
+				46E5653D1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.m */,
+			);
+			name = InfiniteScroll;
 			sourceTree = "<group>";
 		};
 		46FA27AC1A36C4F80048E17A /* MBProgressHUD */ = {
@@ -412,6 +599,19 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				el,
+				es,
+				fr,
+				it,
+				ja,
+				nl,
+				"pt-PT",
+				pt,
+				ru,
+				sv,
+				th,
+				tr,
 			);
 			mainGroup = 46B9213E1A31582100D83851;
 			productRefGroup = 46B921481A31582100D83851 /* Products */;
@@ -429,6 +629,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C712A01A5A3F5200BA4A72 /* IASKLocalizable.strings in Resources */,
+				464452151A51D9B10073B1D1 /* AppSettings.bundle in Resources */,
 				46B921521A31582100D83851 /* Main.storyboard in Resources */,
 				46B921571A31582100D83851 /* LaunchScreen.xib in Resources */,
 				46B921541A31582100D83851 /* Images.xcassets in Resources */,
@@ -449,40 +651,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C712981A5A3F5200BA4A72 /* IASKAppSettingsWebViewController.m in Sources */,
 				46610DA11A4C04CC007E1145 /* UIImage+GIF.m in Sources */,
 				46B9218F1A315F5000D83851 /* LoginViewController.swift in Sources */,
-				46B921911A31AAF900D83851 /* AccountTableViewController.swift in Sources */,
 				461F0B5D1A4BC05E003BA44E /* AccountViewController.swift in Sources */,
 				461F0B531A4AA125003BA44E /* AFHTTPSessionManager.m in Sources */,
+				46C712A21A5A3F5200BA4A72 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
 				46610DA31A4C04CC007E1145 /* UIImage+WebP.m in Sources */,
+				46C712A41A5A3F5200BA4A72 /* IASKSwitch.m in Sources */,
+				46C712A51A5A3F5200BA4A72 /* IASKTextField.m in Sources */,
 				46610D981A4C04CC007E1145 /* NSData+ImageContentType.m in Sources */,
 				461F0B541A4AA125003BA44E /* AFNetworkReachabilityManager.m in Sources */,
 				464452121A513CA10073B1D1 /* ActionButtonGroup.swift in Sources */,
+				46C712991A5A3F5200BA4A72 /* IASKMultipleValueSelection.m in Sources */,
 				461F0B511A4AA125003BA44E /* AFHTTPRequestOperation.m in Sources */,
 				46610D9B1A4C04CC007E1145 /* SDWebImageDecoder.m in Sources */,
 				46610DAC1A4E4480007E1145 /* RankViewController.swift in Sources */,
+				46E5653A1A52919700FC4376 /* RankTableViewUIHelper.swift in Sources */,
+				46C7129B1A5A3F5200BA4A72 /* IASKSettingsReader.m in Sources */,
+				46E5653E1A53CDC800FC4376 /* UIScrollView+InfiniteScroll.m in Sources */,
 				461F0B571A4AA125003BA44E /* AFURLRequestSerialization.m in Sources */,
 				46610DA01A4C04CC007E1145 /* UIButton+WebCache.m in Sources */,
 				46610D9E1A4C04CC007E1145 /* SDWebImageManager.m in Sources */,
+				46C7129C1A5A3F5200BA4A72 /* IASKSettingsStore.m in Sources */,
+				46C712971A5A3F5200BA4A72 /* IASKAppSettingsViewController.m in Sources */,
 				461F0B561A4AA125003BA44E /* AFURLConnectionOperation.m in Sources */,
+				46C7129E1A5A3F5200BA4A72 /* IASKSettingsStoreUserDefaults.m in Sources */,
 				46610DA51A4C04CC007E1145 /* UIImageView+WebCache.m in Sources */,
+				46C712A31A5A3F5200BA4A72 /* IASKSlider.m in Sources */,
+				46C712A91A5A546700BA4A72 /* AppSettingsTableViewController.swift in Sources */,
 				461F0B591A4AA125003BA44E /* AFURLSessionManager.m in Sources */,
+				46C712641A59666100BA4A72 /* CustomAlertViewUIHelper.swift in Sources */,
 				461F13CC1A345C18005290E1 /* ViewController.swift in Sources */,
 				461F0B371A4AA082003BA44E /* SWRevealViewController.m in Sources */,
 				461F0B551A4AA125003BA44E /* AFSecurityPolicy.m in Sources */,
 				46610DA41A4C04CC007E1145 /* UIImageView+HighlightedWebCache.m in Sources */,
+				46C712A11A5A3F5200BA4A72 /* IASKPSSliderSpecifierViewCell.m in Sources */,
 				46610DA91A4D328F007E1145 /* RatingButtonGroup.swift in Sources */,
 				46610D9C1A4C04CC007E1145 /* SDWebImageDownloader.m in Sources */,
 				46610D9F1A4C04CC007E1145 /* SDWebImagePrefetcher.m in Sources */,
 				46B9214D1A31582100D83851 /* AppDelegate.swift in Sources */,
 				46610D991A4C04CC007E1145 /* SDImageCache.m in Sources */,
 				464452101A5005A60073B1D1 /* AccountViewUIHelper.swift in Sources */,
+				46C712621A59663800BA4A72 /* CustomIOS7AlertView.m in Sources */,
 				46610D9D1A4C04CC007E1145 /* SDWebImageDownloaderOperation.m in Sources */,
 				461F0B521A4AA125003BA44E /* AFHTTPRequestOperationManager.m in Sources */,
 				46610DB21A4EB88A007E1145 /* ScoreImageStamp.swift in Sources */,
 				46610D971A4C04CC007E1145 /* MKAnnotationView+WebCache.m in Sources */,
+				46C7129A1A5A3F5200BA4A72 /* IASKSpecifierValuesViewController.m in Sources */,
 				46610DA21A4C04CC007E1145 /* UIImage+MultiFormat.m in Sources */,
+				46E565401A56779A00FC4376 /* Constant.swift in Sources */,
+				46C7129F1A5A3F5200BA4A72 /* IASKSpecifier.m in Sources */,
 				46610DA61A4C04CC007E1145 /* UIView+WebCacheOperation.m in Sources */,
+				46C7129D1A5A3F5200BA4A72 /* IASKSettingsStoreFile.m in Sources */,
 				46610D9A1A4C04CC007E1145 /* SDWebImageCompat.m in Sources */,
 				461F0B3A1A4AA0A6003BA44E /* MBProgressHUD.m in Sources */,
 				461F0B581A4AA125003BA44E /* AFURLResponseSerialization.m in Sources */,
@@ -524,6 +745,28 @@
 				46B921561A31582100D83851 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		46C7127C1A5A3F5200BA4A72 /* IASKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46C7127D1A5A3F5200BA4A72 /* Base */,
+				46C7127E1A5A3F5200BA4A72 /* de */,
+				46C7127F1A5A3F5200BA4A72 /* el */,
+				46C712801A5A3F5200BA4A72 /* en */,
+				46C712811A5A3F5200BA4A72 /* es */,
+				46C712821A5A3F5200BA4A72 /* fr */,
+				46C712831A5A3F5200BA4A72 /* it */,
+				46C712841A5A3F5200BA4A72 /* ja */,
+				46C712851A5A3F5200BA4A72 /* nl */,
+				46C712861A5A3F5200BA4A72 /* pt-PT */,
+				46C712871A5A3F5200BA4A72 /* pt */,
+				46C712881A5A3F5200BA4A72 /* ru */,
+				46C712891A5A3F5200BA4A72 /* sv */,
+				46C7128A1A5A3F5200BA4A72 /* th */,
+				46C7128B1A5A3F5200BA4A72 /* tr */,
+			);
+			name = IASKLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

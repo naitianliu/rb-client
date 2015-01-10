@@ -23,18 +23,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
 
         let rearViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("accountViewController") as UIViewController
         let rightViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("rankViewController") as UIViewController
-
         
         var frontNavigationController:UINavigationController = UINavigationController(rootViewController: frontViewController)
         var rearNavigationController:UINavigationController = UINavigationController(rootViewController: rearViewController)
+        var rightNavigationController:UINavigationController = UINavigationController(rootViewController: rightViewController)
+        
+        frontNavigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Constant().themeColor]
+        frontNavigationController.navigationBar.tintColor = Constant().themeColor
+        rearNavigationController.navigationBar.topItem?.title = Constant().rearNavBarTitle
+        rearNavigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Constant().themeColor]
+        rightNavigationController.navigationBar.topItem?.title = Constant().rightNavBarTitle
+        rightNavigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Constant().themeColor]
+
+        
+        // frontNavigationController.navigationBar.barTintColor = UIColor(red: 66/255.0, green: 153/255.0, blue: 221/255.0, alpha: 1.0)
         
         var revealController:SWRevealViewController = SWRevealViewController(rearViewController: rearNavigationController, frontViewController: frontNavigationController)
         revealController.delegate = self
-        revealController.rightViewController = rightViewController
+        revealController.rightViewController = rightNavigationController
         
         self.swRevealViewController = revealController
         
-        
+        /*
         if FBSession.activeSession().state == FBSessionState.CreatedTokenLoaded {
             println("yes, logged in")
             self.window?.rootViewController = self.swRevealViewController
@@ -42,8 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SWRevealViewControllerDel
             println("closed")
             self.window?.rootViewController = loginViewController
         }
+        */
 
-        //self.window?.rootViewController = self.swRevealViewController
+        self.window?.rootViewController = self.swRevealViewController
         
         self.window?.makeKeyAndVisible()
         

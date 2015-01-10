@@ -2,63 +2,30 @@
 //  AccountTableViewController.swift
 //  ratebeauty
 //
-//  Created by Liu, Naitian on 12/5/14.
-//  Copyright (c) 2014 Liu, Naitian. All rights reserved.
+//  Created by Liu, Naitian on 1/2/15.
+//  Copyright (c) 2015 Liu, Naitian. All rights reserved.
 //
 
 import UIKit
 
-class AccountTableViewController: UITableViewController, FBLoginViewDelegate, UIActionSheetDelegate {
+class AccountTableViewController: UITableViewController {
 
-    @IBOutlet weak var fbProfilePictureView: FBProfilePictureView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        self.fbProfilePictureView.profileID = "529789400456737"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(indexPath.row)
-        println(indexPath.section)
-        if indexPath.row == 0 && indexPath.section == 2 {
-            let actionSheet: UIActionSheet = UIActionSheet(title: "Are you sure to logout?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Log Out")
-            actionSheet.showInView(self.view)
-        }
-    }
-    
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        if buttonIndex == 0 {
-            println("logout")
-            FBSession.activeSession().closeAndClearTokenInformation()
-        }
-    }
-    
-    func loadLocalUserData() -> NSDictionary {
-        var resultDict:NSMutableDictionary = NSMutableDictionary()
-        var objectID: NSString = NSKeyedUnarchiver.unarchiveObjectWithData(NSUserDefaults.standardUserDefaults().objectForKey("objectID") as NSData) as NSString
-        var name: NSString = NSKeyedUnarchiver.unarchiveObjectWithData(NSUserDefaults.standardUserDefaults().objectForKey("name") as NSData) as NSString
-        var gender: NSString = NSKeyedUnarchiver.unarchiveObjectWithData(NSUserDefaults.standardUserDefaults().objectForKey("gender") as NSData) as NSString
-        resultDict.setValue(objectID, forKey: "objectID")
-        resultDict.setValue(gender, forKey: "gender")
-        resultDict.setValue(name, forKey: "name")
-        return resultDict
-    }
 
     // MARK: - Table view data source
-    
-    /*
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
@@ -72,13 +39,12 @@ class AccountTableViewController: UITableViewController, FBLoginViewDelegate, UI
         return 0
     }
 
-    */
-
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
+
         return cell
     }
     */

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, RatingButtonGroupDelegate, ScoreImageStampDelegate, CardGroupViewHelperDelegate {
+class ViewController: UIViewController, RatingButtonGroupDelegate, ScoreImageStampDelegate, CardGroupViewHelperDelegate, ActionButtonGroupDelegate {
 
     var scoreImageStamp:ScoreImageStamp!
     var cardGroupViewHelper:CardGroupViewHelper!
+    var actionButtonGroup:ActionButtonGroup!
     
     var ratingButtonGroup: RatingButtonGroup!
     var ratingButtonGroupShowHideMark:Int = 0
@@ -19,15 +20,24 @@ class ViewController: UIViewController, RatingButtonGroupDelegate, ScoreImageSta
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if FBSession.activeSession().state != FBSessionState.CreatedTokenLoaded {
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginViewController:UIViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
+            loginViewController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+            self.presentViewController(loginViewController, animated: true, completion: { () -> Void in
+                
+            })
+        }
+        
         let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         var revealController:SWRevealViewController = appDelegate.swRevealViewController!
         appDelegate.window?.rootViewController = revealController
         revealController.panGestureRecognizer()
         revealController.tapGestureRecognizer()
         
-        var revealButtonItem:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "reveal-icon.png"), style: UIBarButtonItemStyle.Bordered, target: revealController, action: Selector("revealToggle:"))
+        var revealButtonItem:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile-icon.png"), style: UIBarButtonItemStyle.Bordered, target: revealController, action: Selector("revealToggle:"))
         var rightRevealButtonItem:UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "reveal-icon.png"), style: UIBarButtonItemStyle.Bordered, target: revealController, action: Selector("rightRevealToggle:"))
-
         
         self.navigationItem.leftBarButtonItem = revealButtonItem
         self.navigationItem.rightBarButtonItem = rightRevealButtonItem
@@ -39,6 +49,17 @@ class ViewController: UIViewController, RatingButtonGroupDelegate, ScoreImageSta
         self.view.addGestureRecognizer(tapGR)
         
         self.scoreImageStamp.addSubViewToTop()
+        
+        self.actionButtonGroup = ActionButtonGroup(view: self.view, delegate:self)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+
+    }
+    
+    override func viewWillLayoutSubviews() {
         
     }
 
@@ -70,15 +91,24 @@ class ViewController: UIViewController, RatingButtonGroupDelegate, ScoreImageSta
         self.scoreImageStamp = ScoreImageStamp(view: self.view, cardView: currentCardView, fbPPView: currentFBPPView, delegate: self)
     }
     
-    func ratingButtonOnClick(buttonIndex: Int) {
+    func ratingButtonOnClick(buttonIndex: Int, button:UIButton) {
         //self.scoreImageStamp.showInView(buttonIndex)
         self.scoreImageStamp.showInView(buttonIndex)
+        self.actionButtonGroup.showInView(self.ratingButtonGroup.btn_10, gapHorizon: self.ratingButtonGroup.gapHorizon)
+        self.ratingButtonGroup.changeTransparent(0.8)
     }
     
     func readyToSwitchCardView() {
         println("finished")
+        //self.scoreImageStamp.hideInView()
+        //self.cardGroupViewHelper.switchCardView("", nextFBProfileID: "")
+    }
+    
+    func goToNextBeautyView() {
         self.scoreImageStamp.hideInView()
         self.cardGroupViewHelper.switchCardView("", nextFBProfileID: "")
+        self.ratingButtonGroup.changeTransparent(0.3)
+        self.actionButtonGroup.hideInView(self.ratingButtonGroup.btn_10, gapHorizon: self.ratingButtonGroup.gapHorizon)
     }
 
 }

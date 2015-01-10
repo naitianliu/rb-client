@@ -24,6 +24,7 @@ class CardGroupViewHelper: NSObject {
     
     var currentCardView:UIView!
     var nextCardView:UIView!
+    
     var currentFBPPView:FBProfilePictureView!
     var nextFBPPView:FBProfilePictureView!
     
@@ -39,6 +40,13 @@ class CardGroupViewHelper: NSObject {
     let nextCardViewFrame:CGRect!
     let currentFBPPViewFrame:CGRect!
     let nextFBPPViewFrame:CGRect!
+    let userInfoViewFrame:CGRect!
+    let nameLabelFrame:CGRect!
+    let scoreLabelFrame:CGRect!
+    let flowerImageViewFrame:CGRect!
+    let specialImageViewFrame:CGRect!
+    let flowerLabelFrame:CGRect!
+    let specialLabelFrame:CGRect!
     
     let nextFBPPViewTag:Int = 22
     
@@ -55,12 +63,19 @@ class CardGroupViewHelper: NSObject {
         self.viewWidth = view.frame.width
         self.viewHeight = view.frame.height
         cardViewWidth = self.viewWidth - 20
-        cardViewHeight = self.cardViewWidth * 1.2
+        cardViewHeight = self.cardViewWidth * 1.5
         
         self.currentCardViewFrame = CGRect(x: self.cardView_x, y: self.cardView_y, width: self.cardViewWidth, height: self.cardViewHeight)
         self.nextCardViewFrame = CGRect(x: self.cardView_x + 5, y: self.cardView_y + 5, width: self.cardViewWidth - 10, height: self.cardViewHeight)
         self.currentFBPPViewFrame = CGRect(x: 5, y: 5, width: self.cardViewWidth - 10, height: cardViewWidth - 10)
         self.nextFBPPViewFrame = CGRect(x: 5, y: 5, width: self.cardViewWidth - 20, height: cardViewWidth - 20)
+        self.userInfoViewFrame = CGRect(x: 5, y: self.currentFBPPViewFrame.height + 10, width: self.currentCardViewFrame.width - 10, height: self.currentCardViewFrame.height - self.currentFBPPViewFrame.height - 15)
+        self.nameLabelFrame = CGRect(x: 0, y: 0, width: self.userInfoViewFrame.width, height: self.userInfoViewFrame.height * 0.3)
+        self.scoreLabelFrame = CGRect(x: 0, y: self.nameLabelFrame.height, width: self.userInfoViewFrame.height - self.nameLabelFrame.height, height: self.userInfoViewFrame.height - self.nameLabelFrame.height)
+        self.flowerImageViewFrame = CGRect(x: self.scoreLabelFrame.width, y: self.nameLabelFrame.height, width: self.scoreLabelFrame.height * 0.5, height: self.scoreLabelFrame.height * 0.5)
+        self.specialImageViewFrame = CGRect(x: self.scoreLabelFrame.width, y: self.nameLabelFrame.height + self.flowerImageViewFrame.height, width: self.scoreLabelFrame.height * 0.5, height: self.scoreLabelFrame.height * 0.5)
+        self.flowerLabelFrame = CGRect(x: self.flowerImageViewFrame.origin.x + self.flowerImageViewFrame.width, y: self.flowerImageViewFrame.origin.y, width: self.userInfoViewFrame.width - self.scoreLabelFrame.width - self.flowerImageViewFrame.width, height: self.flowerImageViewFrame.height)
+        self.specialLabelFrame = CGRect(x: self.flowerLabelFrame.origin.x, y: self.flowerLabelFrame.origin.y + self.flowerLabelFrame.height, width: self.flowerLabelFrame.width, height: self.flowerLabelFrame.height)
         
         self.currentCardView = self.initCurrentCardView(testID_1)
         self.nextCardView = self.initNextCardView(testID_2)
@@ -74,31 +89,69 @@ class CardGroupViewHelper: NSObject {
         var cardView:UIView = UIView(frame: self.currentCardViewFrame)
         cardView.backgroundColor = UIColor.whiteColor()
         cardView.layer.cornerRadius = 5.0
-        cardView.layer.borderColor = UIColor.blackColor().CGColor
-        cardView.layer.borderWidth = 0.3
+        cardView.layer.borderColor = Constant().themeColor.CGColor
+        cardView.layer.borderWidth = 1.0
         cardView.clipsToBounds = true
         
         var fbPPView:FBProfilePictureView = FBProfilePictureView(frame: self.currentFBPPViewFrame)
         fbPPView.profileID = fbProfileID
+        
+        var userInfoView:UIView = self.createUserInfoView()
+        
         cardView.addSubview(fbPPView)
+        cardView.addSubview(userInfoView)
         
         self.cgvhDelegate?.returnCurrentView(cardView, currentFBPPView: fbPPView)
         
         return cardView
     }
     
+    func createUserInfoView() -> UIView {
+        var userInfoView:UIView = UIView(frame: self.userInfoViewFrame)
+        
+        var flowerImageView:UIImageView = UIImageView(frame: self.flowerImageViewFrame)
+        flowerImageView.image = UIImage(named: "rose")
+        var specialImageView:UIImageView = UIImageView(frame: self.specialImageViewFrame)
+        specialImageView.image = UIImage(named: "crown")
+        var scoreLabel:UILabel = UILabel(frame: self.scoreLabelFrame)
+        scoreLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 60)
+        scoreLabel.text = "9.7"
+        var nameLabel:UILabel = UILabel(frame: self.nameLabelFrame)
+        nameLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 30)
+        nameLabel.text = "Emily, 22"
+        var flowerLabel:UILabel = UILabel(frame: self.flowerLabelFrame)
+        flowerLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 30)
+        flowerLabel.text = "\(Constant().multipicationSign) 2048"
+        var specialLabel:UILabel = UILabel(frame: self.specialLabelFrame)
+        specialLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 30)
+        specialLabel.text = "\(Constant().multipicationSign) 2"
+        
+        userInfoView.addSubview(flowerImageView)
+        userInfoView.addSubview(specialImageView)
+        userInfoView.addSubview(scoreLabel)
+        userInfoView.addSubview(nameLabel)
+        userInfoView.addSubview(flowerLabel)
+        userInfoView.addSubview(specialLabel)
+        
+        return userInfoView
+    }
+    
     func initNextCardView(fbProfileID:String) -> UIView {
         var cardView:UIView = UIView(frame: self.nextCardViewFrame)
         cardView.backgroundColor = UIColor.whiteColor()
         cardView.layer.cornerRadius = 5.0
-        cardView.layer.borderColor = UIColor.blackColor().CGColor
-        cardView.layer.borderWidth = 0.3
+        cardView.layer.borderColor = Constant().themeColor.CGColor
+        cardView.layer.borderWidth = 1.0
         cardView.clipsToBounds = true
         
         var fbPPView:FBProfilePictureView = FBProfilePictureView(frame: self.nextFBPPViewFrame)
         fbPPView.profileID = fbProfileID
         fbPPView.tag = self.nextFBPPViewTag
+        
+        var userInfoView:UIView = self.createUserInfoView()
+        
         cardView.addSubview(fbPPView)
+        cardView.addSubview(userInfoView)
         
         return cardView
     }

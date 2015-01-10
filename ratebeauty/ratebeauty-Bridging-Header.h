@@ -14,5 +14,7 @@
 #import "MBProgressHUD.h"
 #import "SWRevealViewController.h"
 #import "UIImageView+WebCache.h"
+#import "UIScrollView+InfiniteScroll.h"
+#import "CustomIOS7AlertView.h"
 
 #endif
